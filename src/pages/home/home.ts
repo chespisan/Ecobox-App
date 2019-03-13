@@ -62,20 +62,15 @@ export class HomePage {
 	}
 
 	ngDoCheck() {
-		console.log('Método DoCheck lanzado');
 		let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-
-		//this.campanaslists = getLocalStorage;
-
 		console.log('GET LS do check', getLocalStorage);
+		//this.campanaslists = getLocalStorage;
 	}
 
 	ionViewDidLoad() {
 		/** One Signal Service */
 		this.init_notification();
-
 		let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-
 		this.campanaslists = getLocalStorage;
 
 		//this.campanaslists = this.data.campanas;
@@ -90,27 +85,13 @@ export class HomePage {
 
 		if (this.platform.is('cordova')) {
 			console.log('INIT NOTIFICATION');
-
 			this.oneSignal.startInit('217bd436-a28b-4c8b-8317-d9b03d0fc3c8', '512846988611');
-
-			// this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
-
-			// let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-
-			// this.campanaslists = getLocalStorage;
-
-			// console.log('GET LS', getLocalStorage);
-
 			this.oneSignal.handleNotificationReceived().subscribe((res) => {
 				console.log('notification received', res.payload.additionalData);
 			});
-
 			this.oneSignal.handleNotificationOpened().subscribe((res) => {
 				console.log('notification opened', res.notification.payload.additionalData);
-				//.....
-				// this.campanaslists = JSON.parse(localStorage.getItem('campanas'));
 
-				//this.myObject.push(res.notification.payload.additionalData);
 
 				let myArray = [];
 
@@ -118,31 +99,12 @@ export class HomePage {
 					let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
 					let response = res.notification.payload.additionalData;
 					getLocalStorage.push(response);
-
 					this.campanaslists = getLocalStorage;
-
-					console.log('- is ARRAYY!!-', getLocalStorage);
-
-
-					//localStorage
-
-					// let obj = Object.assign(getLocalStorage, response);
-
-					// console.log(' fulll fusion', obj);
-
-					// console.log('this my object get item', this.myObject);
-
-					// this.myObject.push(getLocalStorage);
-
-					// console.log('this my LS get item', getLocalStorage);
-					// console.log('this my object get item', this.myObject);
 
 					localStorage.setItem('campanas', JSON.stringify(getLocalStorage));
 				} else {
 					this.myObject.push(res.notification.payload.additionalData);
-
 					console.log('this my object', this.myObject);
-
 					localStorage.setItem('campanas', JSON.stringify(this.myObject));
 				}
 			});
