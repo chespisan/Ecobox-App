@@ -1,0 +1,30 @@
+<ion-header>
+</ion-header>
+<ion-content padding>
+  <ion-title>
+    Comunidad
+  </ion-title>
+ <h3> Notifica a nuestro equipo de soporte con solo un clic:</h3>
+  <ion-list class="com-buttons-list">
+      <button ion-item class="com-button" (click)="showAlert1()" id="SendMessage">
+          <h4>Está lleno el EcoBox que utilicé.</h4>
+          <p>Indícanos la ubicación.</p>
+          <ion-icon name="flecha" item-end  ios="ios-arrow-forward" md="md-arrow-forward" class="community-icon"></ion-icon>
+      </button>
+      <button ion-item class="com-button" (click)="showAlert2()">
+          <h4>El EcoBox no está funcionando.</h4>
+          <p>Indícanos la ubicación.</p>
+          <ion-icon name="flecha" item-end  ios="ios-arrow-forward" md="md-arrow-forward" class="community-icon"></ion-icon>
+      </button>
+      <button ion-item class="com-button" (click)="showAlert3()">
+          <h4>Vi a alguien vandalizando un EcoBox.</h4>
+          <p>Indícanos la ubicación.</p>
+          <ion-icon name="flecha" item-end  ios="ios-arrow-forward" md="md-arrow-forward" class="community-icon"></ion-icon>
+      </button>
+      <button ion-item class="com-button" (click)="showAlert4()">
+          <h4>Quiero sugerir una nueva ubicación.</h4>
+          <p>Indicaré dónde podría ser.</p>
+          <ion-icon name="flecha" item-end  ios="ios-arrow-forward" md="md-arrow-forward" class="community-icon"></ion-icon>
+      </button>
+  </ion-list>
+</ion-content>

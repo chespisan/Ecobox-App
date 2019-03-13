@@ -1,0 +1,23 @@
+<ion-content padding class="dark-bg">
+  <ion-navbar>
+  </ion-navbar>
+  <ion-title>
+    Cambiar Contraseña
+  </ion-title>
+  <form id="change-form"> 
+    <ion-list>
+      <ion-item>
+        <ion-label >Nueva Contraseña</ion-label>
+        <ion-input type="password" name="password" #password></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >Confirmar Contraseña</ion-label>
+        <ion-input type="password" name="confirmedPassword" #confirmedPassword></ion-input>
+      </ion-item>
+    </ion-list>
+    <button id="login-button" ion-button class="green-button" round block (click)="goToCambiar()">
+
+      Ingresar
+    </button>
+  </form>
+</ion-content>

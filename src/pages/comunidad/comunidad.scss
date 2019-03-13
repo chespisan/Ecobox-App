@@ -1,0 +1,38 @@
+page-comunidad {
+  .com-button {
+    overflow: auto !important;
+    border-radius: 10px !important;
+    box-shadow: 2px 2px 2px #ccc;
+    border: 1px solid #a5cd38;
+    margin: 10px 0;
+
+  }
+
+  .com-button h4 {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 0px !important;
+  }
+  .com-button ion-icon {
+    color: #a5cd38;
+  }
+  .com-button:hover {
+    background: #a5cd38;
+    border-color: 1px solid #fff;
+  }
+  .com-button p{
+      text-transform: initial;  }
+
+  .com-button:hover h4,
+  .com-button:hover p,
+  .com-button:hover ion-icon {
+    color: #fff;
+  }
+
+  h3{  color: #403f41;
+  font-weight: lighter;
+  font-size: 14px;
+    margin-bottom: 1em;
+  }
+}

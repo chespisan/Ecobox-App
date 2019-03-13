@@ -1,0 +1,44 @@
+page-preregistro {
+    button {
+        background: transparent;
+        padding: 0px;
+    }
+    h5{
+        font-size: 15px;
+        font-weight: lighter;
+        margin-bottom:0.25em;
+        margin-top:0.5em !important;
+    }
+    p{
+        font-size: 11px;
+        text-align: left;
+        margin: 0px;
+        line-height: 1.25em;
+        font-weight: lighter;
+    }
+    .logo-preregistro {
+        margin: 10% 10% 0px 10%;
+    }
+    .ver-mas-btn {
+        padding: 15px 15px !important;
+        border-color: #403f41;
+        text-transform: capitalize !important;
+        margin: 1%;
+        float:left;
+        max-width:48%;
+      }
+      .ver-mas-btn .button-inner {
+        color: #403f41;
+        border-color: #403f41;
+        text-transform: capitalize !important;
+        font-size: 12px !important;
+      }
+      .icon-prereg{
+        margin-left: 5px;
+        padding-right: 5px;
+      }
+    .toolbar-title {
+        text-align: center;
+    }
+
+}

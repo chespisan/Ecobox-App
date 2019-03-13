@@ -1,0 +1,49 @@
+page-registrar {
+  .item-checkbox {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .green-button {
+    background-color: #a5cd38;
+    padding: 1em;
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    border-radius: 64px;
+    font-weight: bold;
+   font-size: 15px;
+}
+#myform > ion-list > ion-item:nth-child(13) > div.item-inner{padding-right: 0px !important;}
+#myform > ion-list > ion-item.item.item-block.item-md.item-checkbox > div.item-inner{border-bottom: none !important;}
+  .terms {
+    font-size: 10px !important;
+  }
+
+  .item-datetime .item-inner .input-wrapper {
+    margin: 0px 8px;
+  }
+  .item-select .label{
+    margin: 0px 8px !important;
+  }
+  #myform > ion-list > ion-item.item.item-block.item-md.item-checkbox > div.item-inner{
+    border-bottom: 1px solid #dedede;
+}
+#terms-button{width: auto !important;
+  text-decoration: none !important;}
+
+  #terms-button .button-inner{color:#a5cd38;}
+
+  .tabbar.show-tabbar, .tabs-md .tabbar, .tabbar {display:none !important; visibility: hidden !important;}
+
+}
+.picker-md .picker-toolbar {
+  background: #789529 !important;
+  margin-bottom:1em;
+}
+.picker-toolbar-button{
+  width: 50%;
+  text-align: center;
+}
+.picker-md .picker-prefix, .picker-md .picker-suffix, .picker-md .picker-opt.picker-opt-selected {
+  color:  #789529 ;
+}

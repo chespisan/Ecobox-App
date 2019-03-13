@@ -1,0 +1,60 @@
+page-login {
+  .spacer {
+    height: 40px;
+  }
+
+  .goregister {
+    margin-right: 0.5em;
+    color: #fff;
+    text-transform: initial;
+    font-weight:normal;
+    font-size: 13px;
+  }
+
+  .button-inner {
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    
+  }
+
+  .button-clear {
+    height: 1.5em;
+    margin: 0;
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  #login-button2 .button-inner {
+    font-weight: normal;
+    font-size: 11px;
+    margin: 0px;
+    margin-top:0.5em;
+    padding: 0 !important;
+    text-transform: capitalize;
+    text-align: left !important;
+  }
+  #login-button2.button-clear{text-align:left;}
+  .green-link {
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+.logo-login {
+  margin: 10%;
+  width: 80%;
+  margin-top: 100px;
+}
+.item-checkbox {
+    font-size: 12px;
+    font-weight: normal;
+}
+.item-ios, .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating]{
+    color: white; //floating input label color
+    border-bottom: none !important;
+}
+.tabbar.show-tabbar, .tabs-md .tabbar, .tabbar {display:none !important; visibility: hidden !important;}
+}

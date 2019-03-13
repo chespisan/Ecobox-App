@@ -1,0 +1,78 @@
+<ion-content padding class="dark-bg">
+  <ion-navbar>
+  </ion-navbar>
+  <ion-title>
+    Registrar
+  </ion-title>
+  <div class="spacer"></div>
+  <form id="myform" method="post">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Nombre Completo" name=”fullname” #fullname></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="Correo electrónico" name=”email” #email> </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="Celular" name="phone" #phone> </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="Cédula" name="cedula" #cedula></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="Edad" name="age" #age></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha de nacimiento</ion-label>
+        <ion-datetime displayFormat="YYYY/MM/DD" type="date" name="birthday" pickerFormat="YYYY/MM/DD" #birthday
+          doneText="Guardar fecha" cancelText="Cancelar"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Dirección" name="dire" #dire></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Género</ion-label>
+        <ion-select name="gender" #gender>
+          <ion-option value="masculino">Masculino</ion-option>
+          <ion-option value="femenino">Femenino</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Profesión" name="profesion" #profesion> </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Escoge tu País</ion-label>
+        <ion-select okText="Aceptar" cancelText="Cancelar" name="country" #country>
+          <ion-option value="colombia">Colombia</ion-option>
+          <ion-option value="argentina">Argentina</ion-option>
+          <ion-option value="usa">Estados Unidos</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Escoge tu Ciudad</ion-label>
+        <ion-select okText="Aceptar" cancelText="Cancelar" name="city" #city>
+          <ion-option value="bogota">Bogotá</ion-option>
+          <ion-option value="medellin">Medellín</ion-option>
+          <ion-option value="cali">Cali</ion-option>
+          <ion-option value="villa-leyva">Villa de Leyva</ion-option>
+          <ion-option value="sachica">Sáchica</ion-option>
+          <ion-option value="buenos-aires">Buenos Aires</ion-option>
+          <ion-option value="miami">Miami</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Contraseña" name="password" #password></ion-input>
+      </ion-item>
+      <div class="spacer"></div>
+      <ion-item>
+        <ion-label class="terms">Al registrarme, acepto los <br><button ion-button id="terms-button"
+            class="green-button" clear (click)="goToTerms()"> términos y condiciones </button> de EcoBox.</ion-label>
+        <ion-checkbox color="secondary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <button type="submit" name="button" iid="register-button" class="green-button"
+          (click)="doRegister()">Registrar</button>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

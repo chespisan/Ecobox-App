@@ -1,0 +1,33 @@
+<ion-content class="dark-bg">
+  <ion-navbar>
+  </ion-navbar>
+  <ion-title>
+    Recuperar Contraseña
+  </ion-title>
+  <div class="spacer"></div>
+  <form id="recover-form">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Número Telefónico</ion-label>
+        <ion-input type="text" name="phone" #phone></ion-input>
+      </ion-item>
+    </ion-list> 
+    <button id="recover-button1" ion-button class="green-button" round block type="submit" (click)="resetPassword()">
+        Enviar código de acceso     </button>
+    <!--<button id="recover-button1" ion-button class="green-button" round block type="submit" (click)="resetPassword()">
+   Restaurar contraseña
+    </button>-->
+  </form>
+  <div class="spacer"></div>
+<form id="code-form">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Ingresar código</ion-label>
+        <ion-input type="text" name="code" #code></ion-input>
+      </ion-item>
+    </ion-list>
+    <button id="recover-button2" ion-button class="green-button" round block type="submit" (click)="newcodePassword()">
+      Siguiente
+    </button>
+  </form>
+</ion-content>

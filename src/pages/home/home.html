@@ -1,0 +1,25 @@
+<ion-content padding class="card-background-page pg-home">
+  <img src="../../assets/imgs/logo-ecobox-v3.svg" class="logo-login" />
+  <ion-item>
+    <h2>¡Hola {{userFullname}}!</h2>
+    <ion-card>
+      <img src="../../assets/imgs/bg-counter.svg" />
+      <div class="card-hheader">E-COINS ACUMULADOS</div>
+      <div class="card-subtitle home-item"> <img src="../../assets/imgs/dollar-sign.svg" class="shadowed" /></div>
+      <div class="card-title home-item item-text-wrap">
+        {{userEcoins}}
+      </div>
+    </ion-card>
+  </ion-item>
+  <h3>Campañas Vigentes</h3>
+  <ion-list class="detalles-listados">
+    <button class="lista-campanas" *ngFor="let campanaslist of campanaslists" (click)="itemClicked(campanaslist)">
+      <h4 class="detail-title">{{campanaslist.title}}</h4>
+      <h5 class="detail-dire">{{campanaslist.dire}}</h5>
+      <p class="detail-date">Inicio <span>{{campanaslist.init}}</span></p>
+      <p class="detail-date">Finaliza <span>{{campanaslist.end}}</span></p>
+      <p class="detail-description deschidden">{{campanaslist.description}}</p>
+      <div class="ver-mas-btn">Ver más</div>
+    </button>
+  </ion-list>
+</ion-content>

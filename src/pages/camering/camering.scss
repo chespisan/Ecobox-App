@@ -1,0 +1,28 @@
+page-camering {
+  .pcenter {
+    width: 100%;
+    text-align: center;
+  }
+
+  button {
+    background: transparent;
+  }
+
+  .fl-right {
+    float: right;
+  }
+
+  .fl-left {
+    float: left;
+  }
+  .pcenter{
+    z-index: 999;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 1em;
+    left: 0px;
+    font-size: 12px;
+}
+}

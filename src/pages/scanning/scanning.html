@@ -1,0 +1,29 @@
+<ion-content class="transparentbg " padding>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6> <button block (click)="scanQRCode()" class="fl-right"> <img
+              src="../../assets/imgs/icon-camara.svg" class="icono-camara" /></button></ion-col>
+        <ion-col col-6> <button block (click)="clickFlash()" class="fl-left"> <img src="../../assets/imgs/icon-luz.svg"
+              class="icono-flash" /></button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+  <ion-card *ngIf="scannedCode" class="qrcode-wrapper">
+
+    {{ scannedQRCode }}
+
+  </ion-card>
+  <div class="spacer"></div>
+  <ion-card>
+    <img src="../../assets/imgs/bg-counter.svg" />
+    <div class="card-hheader">BOTELLAS POR REGISTRAR</div>
+    <div class="card-title home-item item-text-wrap">
+      {{preRegisters}}
+    </div>
+  </ion-card>
+  <div class="spacer"></div>
+  <p class="pcenter">Escanea el código QR del Ecobox más cercano</p>
+  <div class="spacer"></div>
+</ion-content>

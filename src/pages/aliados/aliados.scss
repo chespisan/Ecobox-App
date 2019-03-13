@@ -1,0 +1,39 @@
+page-aliados {
+    h3{  color: #403f41;
+        font-weight: lighter;
+        font-size: 14px;
+          margin-bottom: 1em;
+        }
+
+        .vl {
+            border-left: 1px solid #403f41;
+            height: 60px;
+          }
+          .aliados-icons button{
+            background: transparent;
+            height: 60px;
+          }
+          [col-4] {
+            width: 32%;
+            max-width: 32%;
+            padding-top: 0;
+            text-align: center;
+            padding-left: 0px;
+        }
+        ion-grid{
+            padding:0px;
+        }
+        h4 {
+            font-weight: bold;
+            font-size: 18px;
+            color: #8ca826;
+          }
+         .galeria-sponsors {
+            position: absolute;
+    bottom: 10px;
+    width: 85%;
+        }
+       .grid {
+            padding: 0;
+        }
+}

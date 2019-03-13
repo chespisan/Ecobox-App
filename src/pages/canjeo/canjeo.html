@@ -1,0 +1,36 @@
+<ion-content padding>
+  <ion-navbar>
+  </ion-navbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+
+        <img src="../../assets/imgs/logo-nequi.png" class="logo-aliado" />
+      </ion-col>
+      <ion-col col-9>
+        <ion-title>
+          Canjea por dinero
+        </ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr>
+  <h3>Te damos 1 peso por cada E-coin</h3>
+  <form id="canjeo-form">
+    <ion-list>
+      <ion-item> 
+        <ion-label >Número de Celular</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >Cantidad de E-coins</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer"></div>
+    <button id="login-button" ion-button class="green-button" round block (click)="goToService()" [disabled]="!isEnabled">
+      Canjear Ecoins
+    </button>
+  </form>
+</ion-content>

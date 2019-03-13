@@ -1,0 +1,40 @@
+<ion-content padding>
+  <ion-title>
+    <div class="spacer"></div>
+    Recicla en nuestras mallas
+  </ion-title>
+  <div class="spacer"></div>
+  <img src="../../assets/imgs/logo-ecobox-v1.svg" class="logo-preregistro" />
+  <div class="spacer"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <button (click)="goToCamering()" block>
+          <img src="../../assets/imgs/icon-preregistro.svg" class="img-botones-scan" />
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <h5>PRE REGISTRAR</h5>
+        <p>Escanea el código de barras de tu envase y agiliza el proceso de registro cuando visites una malla EcoBox.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <button (click)="goToScanning()" block>
+          <img src="../../assets/imgs/icon-registro.svg" class="img-botones-scan" />
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <h5>REGISTRAR</h5>
+        <p>Escanea el código QR de la malla en que depositas tus envases para aumentar tus E-coins.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="spacer"></div>
+  <button col-6 ion-button outline round item-end (click)="goToInstrucciones()" class="ver-mas-btn">
+    <img src="../../assets/imgs/icon-instrucciones.svg" class="icon-prereg" /> Instrucciones
+  </button>
+  <button col-6 ion-button outline round item-end class="ver-mas-btn"  (click)="goToLocalizacion()" class="ver-mas-btn">
+    <img src="../../assets/imgs/icon-mapa.svg" class="icon-prereg" /> Ver mapa
+  </button>
+</ion-content>

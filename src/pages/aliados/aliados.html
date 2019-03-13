@@ -1,0 +1,46 @@
+<ion-content padding>
+  <ion-title>
+    Aliados
+  </ion-title>
+  <h3> Próximamente podrás redimir tus ecoins con:</h3>
+  <!--h3> Selecciona el aliado con el que quieres redimir tus E-coins:</h3>-->
+  <ion-grid class="aliados-icons">
+    <ion-row>
+      <ion-col col-4>
+        <button (click)="doCanjeo()" block [disabled]="!isEnabled">
+          <img src="../../assets/imgs/logo-nequi.png" class="logo-aliado" /></button>
+      </ion-col>
+      <div class="vl"></div>
+      <ion-col col-4>
+        <button block [disabled]="!isEnabled">
+          <img src="../../assets/imgs/logo-puntoscolombia.png" class="logo-aliado" /></button>
+      </ion-col>
+      <div class="vl"></div>
+      <ion-col col-4>
+        <button [disabled]="!isEnabled" block>
+          <img src="../../assets/imgs/logo-transmi.png" class="logo-aliado" /></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="spacer"></div>
+
+  <div class="galeria-sponsors">
+        <h4>Patrocinadores</h4>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>
+              <!--<ion-col col-4  *ngFor="let image of [1,2,3]"> <div class="image-container" [style.background-image]="'url(assets/img/' + image + '.jpg)'">-->
+                <div class="sponsor-container"><img src="../assets/imgs/logo-bancolombia.png"></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+     
+     
+        <!-- More Pinterest floating gallery style -->
+     
+      </div>
+
+
+  <div class="spacer"></div>
+</ion-content>

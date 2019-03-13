@@ -1,0 +1,20 @@
+<ion-content class="dark-bg " padding>
+  <ion-navbar>
+      <ion-grid>
+          <ion-row>
+            <ion-col col-12> <button  block (click)="clickFlash()" class="fl-right"> <img src="../../assets/imgs/icon-luz.svg"
+                  class="icono-flash" /></button></ion-col>
+          </ion-row>    
+        </ion-grid>
+  </ion-navbar>
+
+  <ion-card *ngIf="scannedCode" class="barcode-wrapper">
+    <ion-card-content>
+      <!-- {{ scannedBarCode }} -->
+    </ion-card-content>
+  </ion-card>
+
+  <div class="spacer"></div>
+  <p class="pcenter">Escanea el código de barras horizontalmente</p>
+  <div class="spacer"></div>
+</ion-content>

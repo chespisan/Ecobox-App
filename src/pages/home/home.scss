@@ -1,0 +1,190 @@
+
+page-home {
+  .item-md h2 {
+    font-size: 2rem;}
+  .pg-home {
+    background: url(../../../assets/bg-puntos.svg) #fff no-repeat 0% 15% !important;}
+    .item-md.item-block .item-inner {
+      border-bottom: transparent;
+  }
+ 
+  
+  
+  .scroll-content {
+    overflow: hidden !important;
+}
+.scroll-content > ion-item > div.item-inner, div.scroll-content > ion-item{
+  padding:0px !important;
+}
+.item.item-block.item-md{background:  transparent; margin:0px;}
+
+h3{
+  margin: 0;
+}
+page-home div.scroll-content > ion-item.item-md{
+  background: transparent !important;
+}
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .home-item {
+    font-size: 90px;
+    font-weight: bold;
+    text-shadow: 5px 3px 3px #403f41;
+    top: 35%;
+    letter-spacing: -5px;
+  }
+
+  .button-inner {
+    color: #403f41;
+  }
+
+  .lista-campanas {
+    border-bottom: 1px solid #9E9E9E;
+    margin-bottom: 10px;
+    padding: 0;
+    background: #fff;
+    text-align: left;
+    line-height: 1em;
+    width: 100%;
+    position:relative;
+    padding: 1em 0;
+  }
+  .detail-date{
+    font-size: 14px;
+    margin: 0px 0;
+    font-weight: normal;
+    max-width: 85%;
+    line-height: 20px;
+}
+  .ver-mas-btn {
+    padding: 10px 5px !important;
+    color: #403f41;
+    border: #403f41 1px solid;
+    text-transform: capitalize !important;
+    font-size: 14px !important;
+    margin: 0px !important;
+    float: right;
+    border-radius: 50px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    width: 35%;
+    text-align: center;
+  }
+  h2{
+    font-size: 24px;
+    margin-top: 5px;
+}
+.item-md h2 {
+    margin: 2px 0;
+    font-size: 2rem;
+}
+  h4 {
+    font-size: 15px;
+    font-weight: bold !important;
+    margin-bottom: 0px;
+  }
+
+  h5 {
+    font-size: 14px;
+    margin: 2px 0;
+    font-weight: normal;
+  }
+  .detalles-listados{
+    height: 185px;
+    overflow-y: scroll;
+    width: 100%;
+    margin-top: 1em;
+}
+.deschidden{visibility: hidden;}
+}
+
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .card-hheader {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .card-title {
+    position: absolute;
+    width: 60%;
+    font-weight: 500;
+    color: #fff;
+    right: 0%;
+    text-align: left;
+    text-shadow: 6px 0px 10px #92a537 !important;
+  }
+
+  .card-subtitle.home-item {
+    position: absolute;
+    color: #fff;
+    left: 5%;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    width: 90px;
+    text-align: center;
+    box-shadow: 6px 0px 10px #92a537;
+    font-size: 60px;
+    height: 90px;
+    padding-top: 0px;
+    text-shadow: none;
+    top: 70px;
+  }
+
+  .card-subtitle.home-item img {
+    width: 80%;
+    margin: 5px auto;
+  }
+
+  .shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  }
+
+
+  ion-card {
+    margin: 2em 0px !important;
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.4);
+    border-radius: 25px;
+  }
+
+  ion-card img {
+    width: 100%;
+  }
+
+.scroll-content > ion-item > div.item-inner > div > ion-label, #tabpanel-t0-0 > page-home:nth-child(4) > ion-content > div.scroll-content > ion-item, #tabpanel-t0-0 > page-home:nth-child(4) > ion-content > div.scroll-content > ion-item{
+  background: transparent !important;
+}
+#tabpanel-t0-0 > page-home:nth-child(4) > ion-content > div.scroll-content > ion-item > div.item-inner > div > ion-label > h2{margin-top:1em;}
+}
+.card-background-page .scroll-content > ion-item > div.item-inner > div > ion-label, .card-background-page #tabpanel-t0-0 > page-home:nth-child(4) > ion-content > div.scroll-content > ion-item, .card-background-page #tabpanel-t0-0 > page-home:nth-child(4) > ion-content > div.scroll-content > ion-item {
+  background: transparent !important;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.deschidden{display:none;}
+
+.item-text-wrap .col{
+  width: 33.33%;
+  text-align: center;
+}

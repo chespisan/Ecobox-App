@@ -1,0 +1,257 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #403f41;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 32px;
+  color: #8ca826;
+}
+
+h2 {
+  font-weight: lighter;
+  color: #403f41;
+  font-size: 21px;
+}
+
+h3, .toolbar-title {
+  font-weight: bold;
+  font-size: 21px;
+  color: #8ca826;
+}
+
+h4 {
+  font-weight: lighter;
+  color: #403f41;
+}
+
+.padding {
+  padding: 20px;
+}
+
+form {
+  width: 85%;
+  margin: auto;
+}
+/*PARA EL SPLASH*/
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/*button {
+  border-radius: 50%;
+  padding: 10px;
+  text-transform: capitalize !important;
+}*/
+
+.button-inner {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.item ion-checkbox {
+  margin: 10px 5px 10px 0px !important;
+}
+
+.checkbox-icon {
+  border-radius: 50% !important;
+  border: 1px solid #a5cd38;
+  overflow: hidden;
+}
+
+.checkbox-md-secondary .checkbox-checked {
+  border-color: #a5cd38;
+  background-color: #a5cd38;
+}
+
+.tabbar {
+  background-color: #f7f7f8;
+}
+
+.toolbar-title {
+  padding: 0px !important;
+}
+
+.toolbar-background {
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.back-button {
+  margin: 0px;
+  padding: 0px;
+  margin-left: -1em;
+  margin-bottom: 0.5em,
+}
+
+.toolbar .back-button .button-inner {
+  color: #a5cd38 !important;
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar-title {
+  font-weight: bold;
+  font-size: 21px;
+  color: #8ca826;
+  padding: 0px;
+}
+
+/**Para otras clases**/
+.scroll-content {
+  padding: 30px !important;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.alert-radio-label {
+  text-align: left;
+}
+
+.alert-button-group>button:nth-child(1) {
+  background: #9E9E9E !important;
+}
+
+.ion-content {
+  background: #fff;
+}
+
+#terms-button {
+  background: transparent;
+  text-transform: lowercase;
+  padding: 0px;
+  height: auto;
+  margin: 0;
+  vertical-align: middle;
+  text-decoration:underline;
+  text-decoration-color:#8ca826;
+}
+
+#terms-button .button-inner {
+  font-size: 10px;
+}
+
+.dark-bg .back-button .button-inner {
+  color: #ffffff;
+}
+
+.ion-navbar.toolbar,
+.toolbar-md,
+.ios-toolbar {
+  min-height: 30px !important;
+}
+
+.dark-bg {
+  background-color: #221816;
+}
+
+.dark-bg .scroll-content {
+  padding:25px !important;
+}
+
+.dark-bg label,
+.dark-bg input {
+  color: #fff;
+}
+
+.dark-bg a {
+  color: #a5cd38;
+}
+
+.dark-bg form ion-list ion-item {
+  background: transparent !important;
+  color: #fff;
+  padding: 0;
+}
+
+.dark-bg .toolbar-background {
+  background-color: transparent !important;
+  border: none;
+}
+
+.dark-bg .toolbar-title {
+  color: #fff;
+  text-align: left;
+}
+
+.green-button {
+  background-color: #a5cd38;
+}
+.green-button:hover {
+  background-color: #8ca826 !important;
+}
+
+.green-link {
+  color: #a5cd38;
+}
+
+.gray-button {
+  background-color: #403f41;
+}
+
+.button-50 {
+  float: left;
+  width: 48%;
+}
+
+.inner-page-image {
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+.inner-page-content {
+  overflow-y: scroll;
+  height: 150px;
+}
+
+ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+ol li {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.alert-button {
+  text-align: right;
+  text-align: end;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  text-transform: capitalize !important;
+  background-color: #a5cd38 !important;
+  margin: 0 8px 0 0;
+  padding: 10px;
+  text-align: center;
+}

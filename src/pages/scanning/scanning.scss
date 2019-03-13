@@ -1,0 +1,116 @@
+page-scanning {
+  
+  ion-content {
+    background: transparent !important;
+ }
+ .transparentBody, .transparentbg {
+  background: transparent !important;
+}
+  .pcenter {
+      width: 100%;
+      text-align: center;
+    }
+  
+    button {
+      background: transparent;
+    }
+  
+    .fl-right {
+      float: right;
+    }
+  
+    .fl-left {
+      float: left;
+    }
+    .pcenter{
+      z-index: 999;
+      color: #000;
+      position: fixed;
+      width: 100%;
+      text-align: center;
+      bottom: 1em;
+      left: 0px;
+      font-size: 14px;
+  }
+ p.text-center{
+    text-align: center;
+    color: #a5cd38;
+    font-weight: 900;
+    //text-shadow: 2px 2px 2px #ccc;
+}
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    box-shadow: none;
+  }
+  .card-md{
+    overflow: hidden;
+    border-radius: 1em;
+    background: transparent;
+    width: 100%;
+}
+  .card-hheader {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .card-title {
+    position: absolute;
+    font-weight: 500;
+    color: #fff;
+    right: 0%;
+    text-shadow: 6px 0px 10px #92a537 !important;
+    top: 80px;
+    font-size: 90px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .card-subtitle.home-item {
+    position: absolute;
+    color: #fff;
+    left: 5%;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    width: 90px;
+    text-align: center;
+    box-shadow: 6px 0px 10px #92a537;
+    font-size: 60px;
+    height: 90px;
+    padding-top: 0px;
+    text-shadow: none;
+    top: 90px;
+  }
+
+  .card-subtitle.home-item img {
+    width: 80%;
+    margin: 5px auto;
+  }
+
+  .shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  }
+
+
+  ion-card {
+    margin: 2em 0px !important;
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.4);
+    border-radius: 25px;
+  }
+
+  ion-card img {
+    width: 100%;
+  }
+}

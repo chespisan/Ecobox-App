@@ -1,0 +1,29 @@
+<ion-content padding class="dark-bg">
+  <img src="../../assets/imgs/logo-ecobox-v2.svg" class="logo-login" />
+  <form id="login-form">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Celular</ion-label>
+        <ion-input type="number" name="phone" #phone></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" name="password" #password></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Recordarme</ion-label>
+        <ion-checkbox color="secondary" (click)="toogleRememberme()"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <button  ion-button id="login-button1" class="green-button" (click)="doLogin()" round block>
+      Ingresar
+    </button>
+  </form>
+  <button id="login-button2" ion-button clear (click)="goToRecuperar()">
+    Recuperar contraseña
+  </button>
+  <div class="spacer"></div>
+  <button id="login-button3" ion-button clear (click)="goToRegistrar()">
+    <span class="goregister"> ¿No tienes una cuenta? </span><span class="green-link">Regístrate</span>
+  </button>
+</ion-content>

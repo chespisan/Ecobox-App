@@ -1,0 +1,92 @@
+page-tabs-controller {
+  .tabsController-tabs {
+    background-color: #f7f7f8;
+  }
+}
+
+#tab-t0-0 {
+  background: url("../../assets/imgs/menu1.svg") no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-1 {
+  background: url("../../assets/imgs/menu2.svg") no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-2 {
+  background: url("../../assets/imgs/menu3.svg") no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-3 {
+  background: url("../../assets/imgs/menu4.svg") no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-4 {
+  background: url("../../assets/imgs/menu5.svg") no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-5 {
+  background: url("../../assets/imgs/menu6.svg") no-repeat !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-6 {
+  background: url("../../assets/imgs/menu7.svg") no-repeat!important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+
+#tab-t0-0,
+#tab-t0-1,
+#tab-t0-2,
+#tab-t0-3,
+#tab-t0-4,
+#tab-t0-5,
+#tab-t0-6 {
+  background-position: top !important;
+}
+#tab-t0-0:hover,
+#tab-t0-1:hover,
+#tab-t0-2:hover,
+#tab-t0-3:hover,
+#tab-t0-4:hover,
+#tab-t0-5:hover,
+#tab-t0-6:hover{
+  background-position: center 115% !important;
+}
+.tabs-controller 
+a[aria-expanded="true"]
+{  background-position: center 115% !important;
+}
+
+
+.tab-button, .tabs-md .tab-button, .ion-tabs .tab-button {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    overflow:hidden;
+    max-height:24px;
+    min-height: 24px;
+    height: 24px;
+}
+
+.tabs-md[tabsHighlight="true"] .tab-highlight {
+  background-color: #afcb49;
+  background-position: center 115% !important;
+}
