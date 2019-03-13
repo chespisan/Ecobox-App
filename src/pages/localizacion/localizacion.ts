@@ -1,10 +1,9 @@
 import { Component, ViewChild, ElementRef,  NgZone } from '@angular/core';
+import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LoadingController } from 'ionic-angular';
-import { IonicPage, NavController, NavParams, App, Tabs } from 'ionic-angular';
-
 
 declare var google;
 
@@ -14,21 +13,23 @@ declare var google;
 })
 export class LocalizacionPage {
   markers: any;
+  autocomplete: any;
+  GoogleAutocomplete: any;
   GooglePlaces: any;
   geocoder: any
+  autocompleteItems: any;
   loading: any;
   google: any;
 
   @ViewChild('mapContainer') mapContainer: ElementRef;
   map: any;
 
-  constructor(    public zone: NgZone, 
-    public geolocation: Geolocation,public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, private app: App) {
+  constructor(    public zone: NgZone,
+    public geolocation: Geolocation,public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController) {
       this.loading = this.loadingCtrl.create();
+
   }
-  ionViewDidLoad(){
-    //this.locationsService.getLocalData();
-}
+
   ionViewWillEnter() {
     this.displayGoogleMap();
     this.tryGeolocation();
@@ -47,9 +48,8 @@ export class LocalizacionPage {
 
   getMarkers() {
     //refierase a este archivo json para editar o agregar marcadores
-   // this.http.get('http://ecoboxrecicla.com/ecobox/markers.json')
-   this.http.get('assets/data/markers.json')
-    .map((res) => res.json().data)
+    this.http.get('assets/data/markers.json')
+    .map((res) => res.json())
     .subscribe(data => {
       this.addMarkersToMap(data);
     });
@@ -60,7 +60,7 @@ export class LocalizacionPage {
       var position = new google.maps.LatLng(marker.latitude, marker.longitude);
       var ecoboxMarker = new google.maps.Marker({position: position, title: marker.title, icon: 'assets/imgs/icon-pin.png'});
       ecoboxMarker.setMap(this.map);
-    } 
+    }
   }
   tryGeolocation() {
     this.loading.present();

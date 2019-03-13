@@ -59,11 +59,27 @@ export class HomePage {
 		this.userFullname = globalDataProvider.fullname;
 		this.userEcoins = globalDataProvider.ecoins;
 		this.preregistersCount = globalDataProvider.preregistersCount;
-	}
+  }
+
+
+  ngDoCheck(){
+    console.log('Método DoCheck lanzado');
+    let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
+
+    //this.campanaslists = getLocalStorage;
+
+    console.log('GET LS do check', getLocalStorage);
+
+  }
 
 	ionViewDidLoad() {
 		/** One Signal Service */
     this.init_notification();
+
+    let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
+
+    this.campanaslists = getLocalStorage;
+
 
 		//this.campanaslists = this.data.campanas;
 	}
@@ -75,48 +91,70 @@ export class HomePage {
 	init_notification() {
 
 
-		this.campanaslists = [];
+		//this.campanaslists = {};
 
 		if (this.platform.is('cordova')) {
       console.log('INIT NOTIFICATION');
-			this.oneSignal.startInit('b885898f-30ea-41da-a998-ab9daa2d497f', '512846988611');
+
+			this.oneSignal.startInit('217bd436-a28b-4c8b-8317-d9b03d0fc3c8', '512846988611');
 
       // this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
 
-      let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
+      // let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
 
-      this.campanaslists = getLocalStorage;
+      // this.campanaslists = getLocalStorage;
 
-      console.log('GET LS', getLocalStorage);
+      // console.log('GET LS', getLocalStorage);
 
 
 			this.oneSignal.handleNotificationReceived().subscribe((res) => {
 				console.log('notification received', res.payload.additionalData);
 
-        this.myObject.push(res.payload.additionalData);
 
-
-				if (localStorage.getItem('campanas')) {
-
-          let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-
-          this.myObject.push(getLocalStorage);
-
-          console.log('this my object', this.myObject);
-          console.log('this my LS', getLocalStorage);
-
-          localStorage.setItem('campanas', JSON.stringify(this.myObject));
-
-				} else {
-          console.log('this my object', this.myObject)
-
-					localStorage.setItem('campanas', JSON.stringify(this.myObject));
-				}
 			});
 
 			this.oneSignal.handleNotificationOpened().subscribe((res) => {
 				console.log('notification opened', res.notification.payload.additionalData);
         //.....
+        // this.campanaslists = JSON.parse(localStorage.getItem('campanas'));
+
+        //this.myObject.push(res.notification.payload.additionalData);
+
+        let myArray = [];
+
+				if (localStorage.getItem('campanas')) {
+
+          let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
+          let response = res.notification.payload.additionalData;
+          getLocalStorage.push(response);
+
+          this.campanaslists = getLocalStorage;
+
+          console.log('- is ARRAYY!!-', getLocalStorage);
+
+          //localStorage
+
+          // let obj = Object.assign(getLocalStorage, response);
+
+          // console.log(' fulll fusion', obj);
+
+
+          // console.log('this my object get item', this.myObject);
+
+          // this.myObject.push(getLocalStorage);
+
+          // console.log('this my LS get item', getLocalStorage);
+          // console.log('this my object get item', this.myObject);
+
+          // localStorage.setItem('campanas', JSON.stringify(this.myObject));
+
+				} else {
+          this.myObject.push(res.notification.payload.additionalData);
+
+          console.log('this my object', this.myObject)
+
+					localStorage.setItem('campanas', JSON.stringify(this.myObject));
+				}
 
 			});
 
