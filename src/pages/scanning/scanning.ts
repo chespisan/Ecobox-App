@@ -1,16 +1,12 @@
 import { Platform } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-import { ToastController } from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { Flashlight } from '@ionic-native/flashlight';
-import { CompartirService } from '../../services/compartir.service';
 import { Http, Headers, RequestOptions } from "@angular/http";
 import { HomePage } from '../../pages/home/home';
 import { GlobalDataProvider } from "../../providers/global-data/global-data";
-import { AndroidPermissions } from "@ionic-native/android-permissions";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-//import { raceStatic } from 'rxjs/operator/race';
 
 /**
  * Generated class for the ScanningPage page.
@@ -31,6 +27,7 @@ export class ScanningPage {
   @ViewChild("userId") userId;
 
   preRegisters: any;
+  tabBarElement: any;
 
   constructor(public navCtrl: NavController,
     private http: Http,
@@ -43,6 +40,15 @@ export class ScanningPage {
     public platform: Platform
   ) {
     this.preRegisters = globalDataProvider.preregistersCount;
+    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+
+  }
+  ionViewWillEnter() {
+    this.tabBarElement.style.display = 'none';
+  }
+
+  ionViewWillLeave() {
+    this.tabBarElement.style.display = 'flex';
   }
   clickFlash(){
     this.flashlight.toggle();
@@ -108,6 +114,7 @@ export class ScanningPage {
     });
 
   }
+
 
 
 }

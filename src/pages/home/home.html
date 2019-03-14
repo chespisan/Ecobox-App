@@ -12,7 +12,7 @@
     </ion-card>
   </ion-item>
   <h3>Campañas Vigentes</h3>
-  <ion-list class="detalles-listados">
+  <ion-list class="detalles-listados" *ngIf="campanaslists.length > 0">
     <button class="lista-campanas" *ngFor="let campanaslist of campanaslists" (click)="itemClicked(campanaslist)">
       <h4 class="detail-title">{{campanaslist.title}}</h4>
       <h5 class="detail-dire">{{campanaslist.dire}}</h5>

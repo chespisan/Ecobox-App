@@ -17,7 +17,8 @@ import { NotificationOneSignalProvider } from '../providers/notification-one-sig
 })
 export class EcoboxApp {
   //rootPage:any = LoginPage;
-  rootPage: any = TabsControllerPage;
+  rootPage:any = LoginPage;
+
   @ViewChild(Nav) nav: Nav;
 
   constructor(
@@ -40,7 +41,7 @@ export class EcoboxApp {
 
 
        // service Push one signal
-       //this.pushOneSignal.init_notification();
+       this.pushOneSignal.init_notification();
 
      //let splash = this.modalCtrl.create(Splash);
     //  splash.present();

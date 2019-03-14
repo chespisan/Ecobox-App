@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular'; 
+import { IonicPage, NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { RegistrarPage } from '../../pages/registrar/registrar';
 import { RecuperarPage } from '../../pages/recuperar/recuperar';
@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 import { Observable} from 'rxjs';
 import { GlobalDataProvider } from "../../providers/global-data/global-data";
 import { Storage } from '@ionic/storage';
+import { TabsControllerPage } from '../../pages/tabs-controller/tabs-controller';
 
 @Component({
   selector: 'page-login',
@@ -22,9 +23,9 @@ export class LoginPage {
   tabBarElement: any;
   remembermechecked : boolean;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, 
-    private http: Http, public loading: LoadingController, 
-    public globalDataProvider: GlobalDataProvider, private storage: Storage) 
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,
+    private http: Http, public loading: LoadingController,
+    public globalDataProvider: GlobalDataProvider, private storage: Storage)
     {
       this.remembermechecked = false;
 
@@ -45,11 +46,11 @@ export class LoginPage {
 
 
   ionViewWillEnter() {
-    this.tabBarElement.style.display = 'none';
+    //this.tabBarElement.style.display = 'none';
   }
 
   ionViewWillLeave() {
-    this.tabBarElement.style.display = 'flex';
+    //this.tabBarElement.style.display = 'flex';
   }
   goToRegistrar() {
     this.navCtrl.push(RegistrarPage);
@@ -66,7 +67,7 @@ export class LoginPage {
       });
       alert.present();
       return
-    } 
+    }
     if (this.password.value == "") {
       let alert = this.alertCtrl.create({
         title: "Error de validación",
@@ -76,7 +77,7 @@ export class LoginPage {
       alert.present();
       return
     }
-    //else{ 
+    //else{
       //this.navCtrl.push(HomePage);
         var headers = new Headers();
         headers.append("Accept", 'application/json');
@@ -106,7 +107,7 @@ export class LoginPage {
                 this.globalDataProvider.fullname = res.details.fullname;
                 this.globalDataProvider.ecoins = res.details.ecoins;
                 this.globalDataProvider.preregistersCount = res.details.preRegistersCount;
-                this.navCtrl.setRoot(HomePage, data);
+                this.navCtrl.setRoot(TabsControllerPage, data);
               } else {
                 let alert = this.alertCtrl.create({
                   title: "Error de conexión",
@@ -116,10 +117,9 @@ export class LoginPage {
                 alert.present();
               }
             });
-        }); 
+        });
       }
   }
 
 
 
-  

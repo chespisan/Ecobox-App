@@ -1,9 +1,10 @@
+
 {
   "name": "ecobox",
   "proxies": [
     {
-      "path": "/api",
-      "proxyUrl": "http://cors.api.com/api"
+      "path": "/markers.json",
+      "proxyUrl": "http://ecoboxrecicla.com/ecobox/markers.json'"
     }  ],
   "integrations": {
     "cordova": {}

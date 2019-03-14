@@ -47,10 +47,9 @@ export class LocalizacionPage {
   }
 
   getMarkers() {
-    //refierase a este archivo json para editar o agregar marcadores
-    this.http.get('assets/data/markers.json')
-    .map((res) => res.json())
-    .subscribe(data => {
+    //refierase a este archivo json para editar o agregar marcadores en servidor
+       //Testing en local:  this.http.get('assets/data/markers.json')
+       this.http.get('http://ecoboxrecicla.com/ecobox/markers.json').map(res => res.json()).subscribe(data => {
       this.addMarkersToMap(data);
     });
   }

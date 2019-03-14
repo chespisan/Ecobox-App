@@ -20,6 +20,8 @@ import { GlobalDataProvider } from '../../providers/global-data/global-data';
 import { NotificationOneSignalProvider } from '../../providers/notification-one-signal/notification-one-signal';
 import { OneSignal } from '@ionic-native/onesignal';
 
+import { CustomStorageProvider } from '../../providers/custom-storage/custom-storage';
+
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html'
@@ -40,6 +42,7 @@ export class HomePage {
 	userEcoins: any;
 	preregistersCount: any;
 	myObject: any;
+	isNotification: boolean;
 
 	constructor(
 		public platform: Platform,
@@ -48,9 +51,28 @@ export class HomePage {
 		public globalDataProvider: GlobalDataProvider,
 		private app: App,
 		public pushNotification: NotificationOneSignalProvider,
-		public oneSignal: OneSignal
+		public oneSignal: OneSignal,
+		public customStorage: CustomStorageProvider
 	) {
 		this.myObject = [];
+		this.campanaslists = [];
+
+		if (!this.customStorage.events.value) {
+			this.customStorage.get('campanas').then((res) => {
+				console.log('RESSS', res);
+				if (res) {
+					this.campanaslists = res;
+				} else {
+				}
+			});
+		}
+
+		// let item = JSON.parse(localStorage.getItem('campanas'));
+		// console.log('ITEM', item);
+
+		// this.campanaslists = item;
+
+		// console.log('campanaslist', this.campanaslists);
 
 		if (globalDataProvider.userId == 0) {
 			// no se ha logueado
@@ -61,57 +83,37 @@ export class HomePage {
 		this.preregistersCount = globalDataProvider.preregistersCount;
 	}
 
-	ngDoCheck() {
-		let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-		console.log('GET LS do check', getLocalStorage);
-		//this.campanaslists = getLocalStorage;
-	}
-
 	ionViewDidLoad() {
-		/** One Signal Service */
-		this.init_notification();
-		let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-		this.campanaslists = getLocalStorage;
+		// console.log('IS FALSE? ', this.isNotification);
+		// if(this.isNotification) {
+		//   this.customStorage.events.subscribe((res) => {
+		//     if (res) {
+		//       this.campanaslists.push(res);
+		//       console.log('campanslist', this.campanaslists);
+		//     }
+		//   });
+		// }
+	}
+	ionViewWillEnter() {
+    console.log('ahhh???', this.customStorage.events);
 
-		//this.campanaslists = this.data.campanas;
+
+		if (this.customStorage.events.value) {
+			this.customStorage.events.subscribe((res) => {
+				if (res) {
+          if(this.campanaslists.indexOf(res) >= 0) {
+            console.log('mismo payload');
+          }else {
+            this.campanaslists.push(res);
+            console.log('campanslist', this.campanaslists);
+          }
+				}
+      });
+
+		}
 	}
 
 	itemClicked(item): void {
 		this.navCtrl.push(DetallePage, item);
-	}
-
-	init_notification() {
-		//this.campanaslists = {};
-
-		if (this.platform.is('cordova')) {
-			console.log('INIT NOTIFICATION');
-			this.oneSignal.startInit('217bd436-a28b-4c8b-8317-d9b03d0fc3c8', '512846988611');
-			this.oneSignal.handleNotificationReceived().subscribe((res) => {
-				console.log('notification received', res.payload.additionalData);
-			});
-			this.oneSignal.handleNotificationOpened().subscribe((res) => {
-				console.log('notification opened', res.notification.payload.additionalData);
-
-
-				let myArray = [];
-
-				if (localStorage.getItem('campanas')) {
-					let getLocalStorage = JSON.parse(localStorage.getItem('campanas'));
-					let response = res.notification.payload.additionalData;
-					getLocalStorage.push(response);
-					this.campanaslists = getLocalStorage;
-
-					localStorage.setItem('campanas', JSON.stringify(getLocalStorage));
-				} else {
-					this.myObject.push(res.notification.payload.additionalData);
-					console.log('this my object', this.myObject);
-					localStorage.setItem('campanas', JSON.stringify(this.myObject));
-				}
-			});
-
-			this.oneSignal.endInit();
-		} else {
-			console.log('One Signal not Browser Config');
-		}
 	}
 }

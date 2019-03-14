@@ -27,6 +27,8 @@ export class TabsControllerPage {
 
   public alertShown:boolean = false;
 
+  test = 2;
+
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams, private storage: Storage, public platform: Platform) {
     this.myIndex = navParams.data.tabIndex || 0;
   }

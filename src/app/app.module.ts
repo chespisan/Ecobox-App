@@ -44,6 +44,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 
 
 import { NotificationOneSignalProvider } from '../providers/notification-one-signal/notification-one-signal';
+import { CustomStorageProvider } from '../providers/custom-storage/custom-storage';
 
 
 
@@ -119,7 +120,8 @@ import { NotificationOneSignalProvider } from '../providers/notification-one-sig
     GoogleMaps,
     AndroidPermissions,
     OneSignal,
-    NotificationOneSignalProvider
+    NotificationOneSignalProvider,
+    CustomStorageProvider
   ]
 })
 export class AppModule { }
